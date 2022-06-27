@@ -1,0 +1,60 @@
+.App {
+  text-align: center;
+  background-color: rgb(238, 238, 238);
+}
+
+.body {
+  background-color: rgb(238, 238, 238);
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+h1 {
+  font-size: 2.85rem;
+  font-weight: 500;
+  line-height: 1.5;
+  padding: 70px 70px;
+  margin: 0;
+}
+
+h2 {
+  padding-bottom: 23px;
+  margin: 0 auto;
+  font-weight: 500;
+  font-size: 2.625rem;
+  max-width: calc(100vw - 3em);
+  line-height: 1.25;
+  letter-spacing: -.02em;
+}
+
+h3 {
+  padding-bottom: 23px;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 1.25;
+  margin: 0;
+}
+
+h4 {
+  font-weight: 800;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+p {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  letter-spacing: -.01em;
+  max-width: calc(100vw - 3em);
+  color: #000;
+  padding: 64px, 0;
+}
+
+p .subtitle {
+  padding-bottom: 23px;
+  border-bottom: 1px solid #000;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 27px;
+  margin: 0;
+}
