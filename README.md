@@ -1,7 +1,7 @@
 
 # Тестовая работа: "nvidia".
 
-## Описание:
+## Описание задачи:
 
 Сreate an SPA displaying list of at least 50 tabletop games from Tesera Database (returned from JSON API).
 Each game is a component (card with an image, name of the game and a short description).
