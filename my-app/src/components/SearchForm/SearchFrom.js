@@ -1,8 +1,6 @@
 import './SearchForm.css'
 import React from "react";
 
-
-
 function SearchForm({ isinputvalue, searchArr, submit }) {
 
     function handleSearchChange(e) {
@@ -12,7 +10,6 @@ function SearchForm({ isinputvalue, searchArr, submit }) {
 
     function handleSubmit(e) {
         e.preventDefault();
-
         searchArr([])
             const arrGames = submit();
         searchArr(arrGames);

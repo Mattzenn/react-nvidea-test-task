@@ -22,3 +22,27 @@
     color: #000;
     padding: 30px;
 }
+
+.movies__card-button {
+    padding: 0;
+    width: 40px;
+    height: 22px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: none;
+    transition: .2s;
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    outline: none;
+    border-radius: 6px;
+}
+
+.movies__card-button_type_false {
+    background-color: red;
+}
+
+.movies__card-button_type_true {
+    background-color: green;
+}

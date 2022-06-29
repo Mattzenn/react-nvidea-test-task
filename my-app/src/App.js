@@ -9,47 +9,48 @@ function App() {
   const [isinputvalue, setIsinputvalue] = React.useState('');
   // все игры для отображения
   const [games, setGames] = React.useState([]);
-
-  // const [isNewArr, setNewArr] = React.useState([games]);
-
+  const [arrgames, setArrGames] = React.useState([]);
+  const [savegames, setSaveGames] = React.useState([]);
 
   function handleKeyword(value) {
     setIsinputvalue(value)
   }
-
 
   React.useEffect(() => {
     mainApi
         .getAllCard()
         .then((data) => {
           setGames(data)
+          setArrGames(data)
         })
         .catch((err) => {
           console.log(err);
         })
   }, []);
 
-
   function handleButton() {
-
     function findGames(game, keyword) {
       return game.title.toLowerCase().includes(keyword.toLowerCase())
     }
 
-    return games.filter((game) => {
-          return findGames(game, isinputvalue);
+    return arrgames.filter((game) => {
+        return findGames(game, isinputvalue);
     })
-
   }
 
-
+  function handleSaveGames(game) {
+    setSaveGames([...savegames, game]);
+    localStorage.setItem('favoritegames', JSON.stringify(savegames));
+    let savecards = JSON.parse(localStorage.getItem('favoritegames'))
+    console.log(savecards)
+  }
 
   return (
     <div className="App">
       <div className="body">
         <div>
         <SearchForm isinputvalue={handleKeyword} searchArr={setGames} submit={handleButton} />
-        <GameCardList cards = { games } />
+        <GameCardList cards = { games } savecards = {savegames} saveGame={handleSaveGames} />
         </div>
       </div>
     </div>
